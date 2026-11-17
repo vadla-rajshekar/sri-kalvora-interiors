@@ -1,0 +1,2052 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #292b22;
+  background: #f8f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  min-height: 88px;
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: #f8f7f2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: #536044;
+  color: #e8d5a3;
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  border-radius: 50%;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+  letter-spacing: 2px;
+}
+
+.brand strong {
+  font-size: 14px;
+}
+
+.brand small {
+  font-size: 9px;
+  color: #8b7951;
+  margin-top: 4px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 23px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar nav a {
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #a48748;
+}
+
+.nav-button,
+.primary-button {
+  background: #536044;
+  color: white;
+  padding: 15px 23px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  background: #35412c;
+}
+
+.eyebrow {
+  color: #a58b55;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.hero {
+  min-height: 650px;
+  background:
+    linear-gradient(90deg, rgba(20,28,20,.85), rgba(20,28,20,.15)),
+    url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=2000')
+    center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 10% 65px;
+  color: white;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.18;
+}
+
+.hero h1 span,
+.intro h2 span,
+.section-heading h2 span,
+.projects-preview h2 span,
+.contact-banner h2 span,
+.detail-content h2,
+.gallery-page h1 span,
+.contact-info h1 span {
+  color: #c4a66c;
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 510px;
+  line-height: 1.9;
+  color: #e2e2dc;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  color: white;
+  font-size: 13px;
+  border-bottom: 1px solid #c4a66c;
+  padding-bottom: 8px;
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 28px;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  color: #eee;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.intro {
+  text-align: center;
+  padding: 105px 20px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.intro h2,
+.projects-preview h2,
+.contact-banner h2 {
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.3;
+}
+
+.intro > p:last-child {
+  color: #77786e;
+  line-height: 1.9;
+  font-size: 14px;
+  max-width: 650px;
+  margin: 25px auto 0;
+}
+
+.services {
+  padding: 85px 8%;
+  background: #eeeee7;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px, 4vw, 43px);
+}
+
+.section-heading > p {
+  color: #77786e;
+  font-size: 13px;
+  max-width: 220px;
+  line-height: 1.7;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  overflow: hidden;
+}
+
+.service-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.service-card:hover img {
+  transform: scale(1.04);
+}
+
+.service-info {
+  padding: 25px;
+}
+
+.service-info > span,
+.detail-item span {
+  color: #a58b55;
+  font-size: 12px;
+}
+
+.service-info h3 {
+  font-size: 23px;
+  margin: 13px 0;
+}
+
+.service-info p {
+  color: #77786e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.learn-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #536044;
+}
+
+.projects-preview {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.projects-preview > p:not(.eyebrow) {
+  color: #77786e;
+  margin: 20px 0 30px;
+  line-height: 1.8;
+}
+
+.contact-banner {
+  background: #343e2f;
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.contact-banner .primary-button {
+  margin-top: 30px;
+}
+
+/* Service detail pages */
+
+.detail-image {
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  background: #343e2f;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.7), transparent);
+}
+
+.detail-image-text {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 9%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.detail-image-text h1 {
+  font-size: clamp(38px, 6vw, 65px);
+}
+
+.detail-content {
+  max-width: 950px;
+  margin: auto;
+  padding: 85px 25px;
+}
+
+.detail-content h2 {
+  font-size: 38px;
+  line-height: 1.3;
+  margin-bottom: 22px;
+}
+
+.detail-content > p:not(.eyebrow) {
+  color: #77786e;
+  line-height: 1.9;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.detail-content h3 {
+  font-size: 25px;
+  margin-bottom: 22px;
+}
+
+.detail-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.detail-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  background: #eeeee7;
+}
+
+.detail-item p {
+  font-size: 14px;
+}
+
+/* Projects gallery */
+
+.gallery-page {
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.gallery-page h1 {
+  font-size: clamp(38px, 5vw, 58px);
+}
+
+.gallery-page > p:not(.eyebrow) {
+  color: #77786e;
+  margin: 20px 0 45px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  text-align: left;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.gallery-card h3 {
+  font-size: 21px;
+  margin-top: 15px;
+}
+
+/* Contact page */
+
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding: 90px 9%;
+  background: #eeeee7;
+}
+
+.contact-info {
+  padding-top: 35px;
+}
+
+.contact-info h1 {
+  font-size: clamp(38px, 5vw, 57px);
+  line-height: 1.3;
+}
+
+.contact-info > p:not(.eyebrow) {
+  color: #77786e;
+  line-height: 1.9;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.contact-detail {
+  margin-top: 35px;
+}
+
+.contact-detail strong {
+  color: #536044;
+  font-size: 14px;
+}
+
+.contact-detail p {
+  margin-top: 9px;
+  color: #77786e;
+  font-size: 13px;
+}
+
+.enquiry-form {
+  background: white;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.enquiry-form h2 {
+  font-size: 29px;
+  margin-bottom: 15px;
+}
+
+.enquiry-form label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #deded4;
+  background: #fafaf7;
+  font-family: inherit;
+  font-size: 13px;
+  outline-color: #536044;
+}
+
+.enquiry-form textarea {
+  resize: vertical;
+}
+
+.enquiry-form button {
+  margin-top: 15px;
+}
+
+/* Footer */
+
+footer {
+  background: #22291f;
+  color: #eee;
+  padding: 35px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer p,
+footer > a {
+  font-size: 11px;
+  color: #c0c1b8;
+}
+
+.not-found {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.not-found h1 {
+  margin-bottom: 25px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1000px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .contact-page {
+    gap: 30px;
+    padding: 65px 5%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 600px;
+    padding: 70px 7%;
+  }
+
+  .hero-caption {
+    left: 7%;
+    right: 7%;
+    font-size: 8px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .service-grid,
+  .gallery-grid,
+  .detail-list,
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-image {
+    height: 350px;
+  }
+
+  .gallery-card img {
+    height: 270px;
+  }
+
+  .enquiry-form {
+    padding: 24px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+  .nav-button {
+    padding: 12px 14px;
+    font-size: 9px;
+  }
+
+  .brand-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+  }
+
+  .brand strong {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 650px;
+    padding: 85px 8% 90px;
+    background-position: 58% center;
+  }
+
+  .hero::before {
+    inset: 12px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 11vw, 61px);
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-caption {
+    bottom: 27px;
+    gap: 15px;
+    font-size: 7px;
+    letter-spacing: 1.3px;
+  }
+
+  .intro {
+    padding: 90px 24px;
+  }
+
+  .services {
+    padding: 80px 7%;
+  }
+
+  .service-grid,
+  .gallery-grid,
+  .detail-list,
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card img {
+    height: 260px;
+  }
+
+  .projects-preview {
+    padding: 90px 24px;
+  }
+
+  .contact-banner {
+    padding: 85px 22px;
+  }
+
+  .detail-image {
+    height: 390px;
+  }
+
+  .detail-image-text {
+    left: 8%;
+    right: 7%;
+  }
+
+  .detail-content {
+    padding: 75px 7%;
+  }
+
+  .gallery-page {
+    padding: 80px 7%;
+  }
+
+  .gallery-card img {
+    height: 280px;
+  }
+
+  .contact-page {
+    gap: 35px;
+    padding: 75px 7%;
+  }
+
+  .contact-info {
+    padding-top: 0;
+  }
+
+  .enquiry-form {
+    padding: 25px 21px;
+  }
+
+  footer {
+    padding: 35px 7%;
+  }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Desktop service cards */
+@media (min-width: 1001px) {
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  .service-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================
+   SRI KALVORA — PREMIUM SERVICE CARDS
+===================================== */
+
+.service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 26px !important;
+  align-items: stretch;
+  width: 100%;
+}
+
+.service-card {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid rgba(185, 154, 93, 0.18);
+  box-shadow: 0 8px 25px rgba(35, 42, 30, 0.045);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(185, 154, 93, 0.55);
+  box-shadow: 0 20px 45px rgba(35, 42, 30, 0.13);
+}
+
+/* Image section */
+
+.service-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #e8e5da;
+}
+
+.service-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+/* Gold numbering */
+
+.service-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: rgba(247, 245, 239, 0.94);
+  color: #a88a50;
+  border: 1px solid rgba(185, 154, 93, 0.65);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+/* Card content */
+
+.service-info {
+  min-height: 245px;
+  padding: 28px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-category {
+  color: #a88a50;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.service-info h3 {
+  color: #303729;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(21px, 2vw, 25px);
+  line-height: 1.3;
+  margin-bottom: 13px;
+}
+
+.service-description {
+  color: #77786e;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 23px;
+}
+
+/* Animated Discover More link */
+
+.learn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-bottom: 6px;
+  color: #536044;
+  border-bottom: 1px solid rgba(185, 154, 93, 0.6);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.learn-link span {
+  display: inline-block;
+  color: #b99a5d;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #a1844e;
+}
+
+.learn-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* Tablet layout */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .service-image {
+    height: 260px;
+  }
+
+  .service-info {
+    min-height: 220px;
+    padding: 25px 22px;
+  }
+
+  .service-info h3 {
+    font-size: 24px;
+  }
+}
+
+
+/* =====================================
+   SRI KALVORA — PREMIUM SERVICE CARDS
+===================================== */
+
+.service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 26px !important;
+  align-items: stretch;
+  width: 100%;
+}
+
+.service-card {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid rgba(185, 154, 93, 0.18);
+  box-shadow: 0 8px 25px rgba(35, 42, 30, 0.045);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(185, 154, 93, 0.55);
+  box-shadow: 0 20px 45px rgba(35, 42, 30, 0.13);
+}
+
+/* Image section */
+
+.service-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #e8e5da;
+}
+
+.service-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+/* Gold numbering */
+
+.service-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: rgba(247, 245, 239, 0.94);
+  color: #a88a50;
+  border: 1px solid rgba(185, 154, 93, 0.65);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+/* Card content */
+
+.service-info {
+  min-height: 245px;
+  padding: 28px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-category {
+  color: #a88a50;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.service-info h3 {
+  color: #303729;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(21px, 2vw, 25px);
+  line-height: 1.3;
+  margin-bottom: 13px;
+}
+
+.service-description {
+  color: #77786e;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 23px;
+}
+
+/* Animated Discover More link */
+
+.learn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-bottom: 6px;
+  color: #536044;
+  border-bottom: 1px solid rgba(185, 154, 93, 0.6);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.learn-link span {
+  display: inline-block;
+  color: #b99a5d;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #a1844e;
+}
+
+.learn-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* Tablet layout */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .service-image {
+    height: 260px;
+  }
+
+  .service-info {
+    min-height: 220px;
+    padding: 25px 22px;
+  }
+
+  .service-info h3 {
+    font-size: 24px;
+  }
+}
+
+/* =====================================
+   SRI KALVORA — PREMIUM SERVICE CARDS
+===================================== */
+
+.service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 26px !important;
+  align-items: stretch;
+  width: 100%;
+}
+
+.service-card {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid rgba(185, 154, 93, 0.18);
+  box-shadow: 0 8px 25px rgba(35, 42, 30, 0.045);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(185, 154, 93, 0.55);
+  box-shadow: 0 20px 45px rgba(35, 42, 30, 0.13);
+}
+
+/* Image section */
+
+.service-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #e8e5da;
+}
+
+.service-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+/* Gold numbering */
+
+.service-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: rgba(247, 245, 239, 0.94);
+  color: #a88a50;
+  border: 1px solid rgba(185, 154, 93, 0.65);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+/* Card content */
+
+.service-info {
+  min-height: 245px;
+  padding: 28px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-category {
+  color: #a88a50;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.service-info h3 {
+  color: #303729;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(21px, 2vw, 25px);
+  line-height: 1.3;
+  margin-bottom: 13px;
+}
+
+.service-description {
+  color: #77786e;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 23px;
+}
+
+/* Animated Discover More link */
+
+.learn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-bottom: 6px;
+  color: #536044;
+  border-bottom: 1px solid rgba(185, 154, 93, 0.6);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.learn-link span {
+  display: inline-block;
+  color: #b99a5d;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #a1844e;
+}
+
+.learn-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* Tablet layout */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .service-image {
+    height: 260px;
+  }
+
+  .service-info {
+    min-height: 220px;
+    padding: 25px 22px;
+  }
+
+  .service-info h3 {
+    font-size: 24px;
+  }
+}
+
+
+/* =====================================
+   SRI KALVORA — PREMIUM SERVICE CARDS
+===================================== */
+
+.service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 26px !important;
+  align-items: stretch;
+  width: 100%;
+}
+
+.service-card {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid rgba(185, 154, 93, 0.18);
+  box-shadow: 0 8px 25px rgba(35, 42, 30, 0.045);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(185, 154, 93, 0.55);
+  box-shadow: 0 20px 45px rgba(35, 42, 30, 0.13);
+}
+
+/* Image section */
+
+.service-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #e8e5da;
+}
+
+.service-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+/* Gold numbering */
+
+.service-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: rgba(247, 245, 239, 0.94);
+  color: #a88a50;
+  border: 1px solid rgba(185, 154, 93, 0.65);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+/* Card content */
+
+.service-info {
+  min-height: 245px;
+  padding: 28px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-category {
+  color: #a88a50;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.service-info h3 {
+  color: #303729;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(21px, 2vw, 25px);
+  line-height: 1.3;
+  margin-bottom: 13px;
+}
+
+.service-description {
+  color: #77786e;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 23px;
+}
+
+/* Animated Discover More link */
+
+.learn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-bottom: 6px;
+  color: #536044;
+  border-bottom: 1px solid rgba(185, 154, 93, 0.6);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.learn-link span {
+  display: inline-block;
+  color: #b99a5d;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #a1844e;
+}
+
+.learn-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* Tablet layout */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .service-image {
+    height: 260px;
+  }
+
+  .service-info {
+    min-height: 220px;
+    padding: 25px 22px;
+  }
+
+  .service-info h3 {
+    font-size: 24px;
+  }
+}
+
+/* =====================================
+   SRI KALVORA — PREMIUM SERVICE CARDS
+===================================== */
+
+.service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 26px !important;
+  align-items: stretch;
+  width: 100%;
+}
+
+.service-card {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid rgba(185, 154, 93, 0.18);
+  box-shadow: 0 8px 25px rgba(35, 42, 30, 0.045);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(185, 154, 93, 0.55);
+  box-shadow: 0 20px 45px rgba(35, 42, 30, 0.13);
+}
+
+/* Image section */
+
+.service-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #e8e5da;
+}
+
+.service-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+/* Gold numbering */
+
+.service-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: rgba(247, 245, 239, 0.94);
+  color: #a88a50;
+  border: 1px solid rgba(185, 154, 93, 0.65);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+/* Card content */
+
+.service-info {
+  min-height: 245px;
+  padding: 28px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-category {
+  color: #a88a50;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.service-info h3 {
+  color: #303729;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(21px, 2vw, 25px);
+  line-height: 1.3;
+  margin-bottom: 13px;
+}
+
+.service-description {
+  color: #77786e;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 23px;
+}
+
+/* Animated Discover More link */
+
+.learn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-bottom: 6px;
+  color: #536044;
+  border-bottom: 1px solid rgba(185, 154, 93, 0.6);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.learn-link span {
+  display: inline-block;
+  color: #b99a5d;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #a1844e;
+}
+
+.learn-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* Tablet layout */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .service-image {
+    height: 260px;
+  }
+
+  .service-info {
+    min-height: 220px;
+    padding: 25px 22px;
+  }
+
+  .service-info h3 {
+    font-size: 24px;
+  }
+}
+/* =====================================
+   SRI KALVORA — PREMIUM SERVICE CARDS
+===================================== */
+
+.service-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 26px !important;
+  align-items: stretch;
+  width: 100%;
+}
+
+.service-card {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid rgba(185, 154, 93, 0.18);
+  box-shadow: 0 8px 25px rgba(35, 42, 30, 0.045);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(185, 154, 93, 0.55);
+  box-shadow: 0 20px 45px rgba(35, 42, 30, 0.13);
+}
+
+/* Image section */
+
+.service-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #e8e5da;
+}
+
+.service-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+/* Gold numbering */
+
+.service-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: rgba(247, 245, 239, 0.94);
+  color: #a88a50;
+  border: 1px solid rgba(185, 154, 93, 0.65);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
+
+/* Card content */
+
+.service-info {
+  min-height: 245px;
+  padding: 28px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-category {
+  color: #a88a50;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.service-info h3 {
+  color: #303729;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(21px, 2vw, 25px);
+  line-height: 1.3;
+  margin-bottom: 13px;
+}
+
+.service-description {
+  color: #77786e;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 23px;
+}
+
+/* Animated Discover More link */
+
+.learn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-bottom: 6px;
+  color: #536044;
+  border-bottom: 1px solid rgba(185, 154, 93, 0.6);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.learn-link span {
+  display: inline-block;
+  color: #b99a5d;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #a1844e;
+}
+
+.learn-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* Tablet layout */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .service-image {
+    height: 260px;
+  }
+
+  .service-info {
+    min-height: 220px;
+    padding: 25px 22px;
+  }
+
+  .service-info h3 {
+    font-size: 24px;
+  }
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-image img,
+  .learn-link,
+  .learn-link span {
+    transition: none !important;
+  }
+}
+ 
+
+/* PREMIUM CIRCULAR WHATSAPP BUTTON */
+
+.floating-whatsapp {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 99999;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #25D366;
+  color: #ffffff;
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.18),
+    0 0 0 5px rgba(37, 211, 102, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  
+  animation: whatsapp-appear 0.7s ease both;
+}
+
+.floating-whatsapp svg {
+  width: 33px;
+  height: 33px;
+}
+
+.floating-whatsapp:hover {
+  background: #128C7E;
+  color: #ffffff;
+  transform: scale(1.1);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.23),
+    0 0 0 8px rgba(37, 211, 102, 0.13);
+}
+
+.floating-whatsapp:focus-visible {
+  outline: 3px solid #b99a5d;
+  outline-offset: 5px;
+}
+
+@keyframes whatsapp-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+
+@media (max-width: 700px) {
+  .floating-whatsapp {
+    width: 56px;
+    height: 56px;
+    right: 18px;
+    bottom: 20px;
+  }
+
+  .floating-whatsapp svg {
+    width: 29px;
+    height: 29px;
+  }
+}
+
+
+/* PROJECT DETAILS PAGE */
+
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+.project-card-info {
+  padding: 18px 5px;
+}
+
+.project-card-info p {
+  color: #a88b53;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.project-card-info h3 {
+  margin: 8px 0;
+}
+
+.project-card-info span {
+  color: #596449;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.project-details-page {
+  background: #f8f7f2;
+  color: #303328;
+}
+
+.project-details-hero {
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-details-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-details-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 65px 8%;
+  color: white;
+  background: linear-gradient(
+    0deg,
+    rgba(20, 27, 19, 0.8),
+    transparent 75%
+  );
+}
+
+.project-details-overlay h1 {
+  font-size: clamp(35px, 5vw, 65px);
+  margin: 12px 0;
+}
+
+.project-details-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 55px 6%;
+}
+
+.project-back-link {
+  display: inline-block;
+  color: #596449;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.project-information {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  padding: 35px 0 75px;
+  align-items: start;
+}
+
+.project-information h2,
+.project-before-after h2,
+.project-complete-gallery h2,
+.project-contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 15px 0 22px;
+}
+
+.project-information p {
+  line-height: 1.9;
+}
+
+.project-info-card {
+  background: #eeede5;
+  padding: 30px;
+  border-left: 3px solid #b99a5b;
+}
+
+.project-info-card p {
+  margin-bottom: 22px;
+}
+
+.project-info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.project-info-card strong {
+  color: #596449;
+}
+
+.project-before-after,
+.project-complete-gallery {
+  padding: 55px 0;
+}
+
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.before-after-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.before-after-grid h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  margin-top: 12px;
+}
+
+.project-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.project-photo-grid img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-photo-grid img:hover {
+  transform: scale(1.03);
+}
+
+.project-contact {
+  background: #343e30;
+  color: white;
+  text-align: center;
+  padding: 75px 20px;
+  margin-top: 50px;
+}
+
+.project-contact-button {
+  display: inline-block;
+  background: #b99a5b;
+  color: white;
+  text-decoration: none;
+  padding: 15px 28px;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.project-contact-button:hover {
+  background: #927641;
+}
+
+.project-not-found {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .project-details-hero {
+    height: 380px;
+  }
+
+  .project-information {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .before-after-grid img {
+    height: 260px;
+  }
+
+  .project-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .project-photo-grid img {
+    height: 190px;
+  }
+
+  .project-details-content {
+    padding: 35px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-photo-grid img {
+    height: 240px;
+  }
+
+  .project-details-overlay {
+    padding: 35px 6%;
+  }
+}
+
